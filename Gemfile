@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # I think I add this here because I'll want it once it's deployed, as opposed to just when I'm developing the app...? (Matisse)
+# P.S. TIL we use 'jsonapi-serializer' instead of 'active_model_serializer' because can be used to more easily generate JSONAPI compliant responses
 gem 'jsonapi-serializer'
 
 group :development, :test do
@@ -55,3 +56,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem "active_model_serializers", "~> 0.10.13"

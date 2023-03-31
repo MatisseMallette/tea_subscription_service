@@ -5,6 +5,6 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def index
-    render json: "1234"
+    render json: CustomerSerializer.new(Customer.all)
   end
 end
