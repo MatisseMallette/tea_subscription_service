@@ -25,7 +25,7 @@ rails s
 
 ## Endpoints
 
-### 
+### Create a customer
 
 ```http
 POST /api/v1/customers/
@@ -38,10 +38,10 @@ POST /api/v1/customers/
 
 Parameters: <br>
 ```
-first_name=string
-last_name=string
-email=string
-address=string
+FIRST_NAME=string
+LAST_NAME=string
+EMAIL=string
+ADDRESS=string
 ```
 
 | Code | Description |
@@ -66,3 +66,59 @@ Example Response:
 ```
 </details>
 
+### Create a subscription
+
+```http
+POST /api/v1/subscriptions/
+```
+
+<details close>
+<summary>  Details </summary>
+<br>
+
+
+Parameters: <br>
+```
+TITLE=string
+PRICE=string
+STATUS=string
+FREQUENCY=string
+TEA_ID=integer
+CUSTOMER_ID=integer
+```
+
+| Code | Description |
+| :--- | :--- |
+| 200 | `OK` |
+
+Example Response:
+
+```json
+{
+    "data": {
+        "id": "1",
+        "type": "subscription",
+        "attributes": {
+            "title": "A subscription!",
+            "price": "$100",
+            "status": "active",
+            "frequency": "high"
+        },
+        "relationships": {
+            "customer": {
+                "data": {
+                    "id": "1",
+                    "type": "customer"
+                }
+            },
+            "tea": {
+                "data": {
+                    "id": "1",
+                    "type": "tea"
+                }
+            }
+        }
+    }
+}
+```
+</details>
