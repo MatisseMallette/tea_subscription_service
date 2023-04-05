@@ -21,6 +21,18 @@ RSpec.describe "Api::V1::Teas", type: :request do
       expect(teas.length).to eq(3)
       expect(teas.first.keys).to eq([:id, :type, :attributes])
       expect(teas.first[:attributes].keys).to eq([:title, :description, :temperature, :brew_time])
+
+      teas.each do |tea|
+        expect(tea[:id]).to be_a(String)
+        expect(tea[:type]).to eq('tea')
+        expect(tea[:attributes][:title]).to be_a(String)
+        expect(tea[:attributes][:description]).to be_a(String)
+        expect(tea[:attributes][:temperature]).to be_a(String)
+        expect(tea[:attributes][:brew_time]).to be_a(String)
+      end
+
+      expect(teas.first[:attributes][:title]).to eq(Tea.first.title)
+      expect(teas.last[:attributes][:title]).to eq(Tea.last.title)
     end
   end
 end
