@@ -10,6 +10,7 @@ RSpec.describe "Api::V1::Teas", type: :request do
       Tea.create(title: 'Tea1', description: 'Tea1 description', temperature: 'Tea1 temperature', brew_time: 'Tea1 brew time')
       Tea.create(title: 'Tea2', description: 'Tea2 description', temperature: 'Tea2 temperature', brew_time: 'Tea2 brew time')
       Tea.create(title: 'Tea3', description: 'Tea3 description', temperature: 'Tea3 temperature', brew_time: 'Tea3 brew time')
+      
       get '/api/v1/teas'
       
       expect(response).to be_successful
@@ -17,8 +18,9 @@ RSpec.describe "Api::V1::Teas", type: :request do
       teas = JSON.parse(response.body, symbolize_names: true)[:data]
       
       expect(teas).to be_an(Array)
-
-      binding.pry
+      expect(teas.length).to eq(3)
+      expect(teas.first.keys).to eq([:id, :type, :attributes])
+      expect(teas.first[:attributes].keys).to eq([:title, :description, :temperature, :brew_time])
     end
   end
 end
