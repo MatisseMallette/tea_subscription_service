@@ -1,6 +1,8 @@
 class Api::V1::SubscriptionsController < ApplicationController
   def create
-    Subscription.create!(subscription_params)
+    customer = Customer.find(params[:customer_id])
+    tea = Tea.find(params[:tea_id])
+    Subscription.create!(subscription_params.merge(customer: customer, tea: tea))
     render json: CustomerSerializer.new(Customer.last)
   end
 
