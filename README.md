@@ -1,24 +1,68 @@
-# README
+# Grant Guru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## MacOS Setup
 
-Things you may want to cover:
+1. Clone the repository
+```
+git clone git@github.com:MatisseMallette/tea_subscription_service.git
+```
+2. Navigate to repo directory
+```
+cd tea_subscription_service
+```
+3. Install requirements
+```
+bundle install
+```
+4. Run migrations
+```
+rails db:{drop,create,migrate,seed}
+```
+5. Run the server
+```
+rails s
+```
 
-* Ruby version
+## Endpoints
 
-* System dependencies
+### 
 
-* Configuration
+```http
+POST /api/v1/customers/
+```
 
-* Database creation
+<details close>
+<summary>  Details </summary>
+<br>
 
-* Database initialization
 
-* How to run the test suite
+Parameters: <br>
+```
+first_name=string
+last_name=string
+email=string
+address=string
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+| Code | Description |
+| :--- | :--- |
+| 200 | `OK` |
 
-* Deployment instructions
+Example Response:
 
-* ...
+```json
+{
+    "data": {
+        "id": "3",
+        "type": "customer",
+        "attributes": {
+            "first_name": "jeff",
+            "last_name": "johnson",
+            "email": "jeffjohnson@gmail.com",
+            "address": "123 Main Street"
+        }
+    }
+}
+```
+</details>
+
