@@ -607,6 +607,8 @@
           1,
           1,
           1,
+          null,
+          null,
           null
         ]
       },
@@ -646,6 +648,18 @@
           1,
           1,
           1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/matissemallette/Desktop/turing_work/4mod/tea_subscription_service/app/serializers/tea_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -657,16 +671,8 @@
           null,
           null
         ]
-      },
-      "/Users/matissemallette/Desktop/turing_work/4mod/tea_subscription_service/app/serializers/tea_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1680691991
+    "timestamp": 1680692593
   }
 }
