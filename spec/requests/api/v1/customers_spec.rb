@@ -37,14 +37,21 @@ RSpec.describe "Api::V1::Customers", type: :request do
 
   describe 'post customer' do
     it 'can create a new customer' do
-      post '/api/v1/customers', params: {
+      customer_params = {
         first_name: 'skwisgaar',
         last_name: 'skwigelf',
         email: 'skwizard92@hotmail.com',
         address: 'Sveeden'
       }
+
+      post '/api/v1/customers', params: customer_params
+
       expect(response).to be_successful
-      
+
+      expect(Customer.last.first_name).to eq(customer_params[:first_name])
+      expect(Customer.last.last_name).to eq(customer_params[:last_name])
+      expect(Customer.last.email).to eq(customer_params[:email])
+      expect(Customer.last.address).to eq(customer_params[:address])
     end
   end
 end

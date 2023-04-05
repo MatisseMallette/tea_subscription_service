@@ -459,14 +459,21 @@
           null,
           1,
           1,
-          1,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
           null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -502,6 +509,20 @@
           1,
           1,
           1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
           1,
           null,
           null,
@@ -563,7 +584,14 @@
           null,
           null,
           1,
+          1,
+          1,
           null,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -586,6 +614,9 @@
         "lines": [
           1,
           1,
+          0,
+          null,
+          null,
           1,
           1,
           1,
@@ -598,10 +629,23 @@
           null,
           null,
           1,
+          1,
+          1,
+          null,
           null,
           1,
-          4,
           null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/matissemallette/Desktop/turing_work/4mod/tea_subscription_service/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -623,6 +667,6 @@
         ]
       }
     },
-    "timestamp": 1680688747
+    "timestamp": 1680691991
   }
 }

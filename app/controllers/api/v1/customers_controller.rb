@@ -9,6 +9,13 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def create
-    
+    Customer.create!(customer_params)
+    render json: CustomerSerializer.new(Customer.last)
+  end
+
+  private
+
+  def customer_params
+    params.permit(:first_name, :last_name, :email, :address)
   end
 end
