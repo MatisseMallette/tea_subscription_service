@@ -1,4 +1,4 @@
-# Grant Guru
+# Tea Subscription Service
 
 ## MacOS Setup
 
