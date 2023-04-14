@@ -23,6 +23,10 @@ rails db:{drop,create,migrate,seed}
 rails s
 ```
 
+## Database Schema
+
+![Untitled](https://user-images.githubusercontent.com/37119569/232088138-09d3a5c1-55c9-49f5-a2e3-32f9e841907d.png)
+
 ## Endpoints
 
 ### Create a customer
