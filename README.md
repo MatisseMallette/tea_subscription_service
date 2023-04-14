@@ -35,7 +35,6 @@ POST /api/v1/customers/
 <summary>  Details </summary>
 <br>
 
-
 Parameters: <br>
 ```
 FIRST_NAME=string
@@ -343,6 +342,60 @@ Example Response:
             }
         }
     ]
+}
+```
+</details>
+
+### Update subscription
+
+```http
+PATCH /api/v1/subscriptions/:subscription_id
+```
+
+<details close>
+<summary>  Details </summary>
+<br>
+
+Parameters: <br>
+```
+TITLE=string
+DESCRIPTION=string
+TEMPERATURE=string
+BREW_TIME=string
+```
+
+| Code | Description |
+| :--- | :--- |
+| 200 | `OK` |
+
+Example Response:
+
+```json
+{
+    "data": {
+        "id": "1",
+        "type": "subscription",
+        "attributes": {
+            "title": "A subscription!",
+            "price": "$100",
+            "status": "inactive",
+            "frequency": "high"
+        },
+        "relationships": {
+            "customer": {
+                "data": {
+                    "id": "1",
+                    "type": "customer"
+                }
+            },
+            "tea": {
+                "data": {
+                    "id": "1",
+                    "type": "tea"
+                }
+            }
+        }
+    }
 }
 ```
 </details>
